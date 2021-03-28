@@ -10,10 +10,13 @@ public class ProductData {
     String productId;
     String title;
     List<ColorData> colorData;
-    BigDecimal priceWas;
-    BigDecimal priceThen1;
-    BigDecimal priceThen2;
-    BigDecimal now;
+
+    public class PriceData {
+        BigDecimal priceWas;
+        BigDecimal priceThen1;
+        BigDecimal priceThen2;
+        BigDecimal priceNow;
+    }
 
     public class ColorData {
         String color;

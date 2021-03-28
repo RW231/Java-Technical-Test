@@ -16,7 +16,8 @@ public class ColorSwatch {
     }
 
     /**
-     * Coverts a basic color name into its RGB value.
+     * Coverts a basic color name into its RGB value in a hexadecimal format.
+     * <p> Defaults to 000000 if the color cannot be resolved.
      * @param basicColor The color to convert to RBG
      * @return The RGB value of the color
      */
