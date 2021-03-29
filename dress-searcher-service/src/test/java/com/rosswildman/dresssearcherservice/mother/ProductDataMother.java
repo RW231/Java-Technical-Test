@@ -10,7 +10,7 @@ import java.util.Collections;
 
 public class ProductDataMother {
 
-    private ProductDataMother(){};
+    private ProductDataMother(){}
 
     public static ProductData theDress() {
         return ProductData.builder()
@@ -50,7 +50,7 @@ public class ProductDataMother {
 
     public static ColorData blackBlue() {
         return ColorData.builder()
-                .color("Black and blue")
+                .color("Black and Blue")
                 .basicColor("Blue")
                 .skuId("909")
                 .build();
