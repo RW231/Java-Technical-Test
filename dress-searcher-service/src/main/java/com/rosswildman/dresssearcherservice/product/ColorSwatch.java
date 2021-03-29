@@ -1,11 +1,13 @@
 package com.rosswildman.dresssearcherservice.product;
 
 import com.rosswildman.dresssearcherservice.datasource.ColorData;
+import lombok.Getter;
 
+@Getter
 public class ColorSwatch {
-    String color;
-    String rbgColor;
-    String skuId;
+    private String color;
+    private String rbgColor;
+    private String skuId;
 
     /**
      * Constructs a new ColorSwatch from {@link ColorData}.
