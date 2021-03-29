@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "productId": "111222",
+      "title": "The Dress",
+      "price": {
+        "was": "",
+        "then1": "",
+        "then2": null,
+        "now": "10.00"
+      },
+      "colorSwatches": [
+        {
+          "color": "Black and blue",
+          "basicColor": "Blue",
+          "skuId": "909"
+        },
+        {
+          "color": "White and Gold",
+          "basicColor": "Gold",
+          "skuId": "101"
+        }
+      ]
+    }
+  ]
+}

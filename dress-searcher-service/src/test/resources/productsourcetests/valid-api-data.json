@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "productId": "111222",
+      "title": "The Dress",
+      "price": {
+        "was": "",
+        "then1": "",
+        "then2": "",
+        "now": "10.00"
+      },
+      "colorSwatches": [
+        {
+          "color": "Black and blue",
+          "basicColor": "Blue",
+          "skuId": "909"
+        },
+        {
+          "color": "White and Gold",
+          "basicColor": "Gold",
+          "skuId": "101"
+        }
+      ]
+    },
+    {
+      "productId": "400",
+      "title": "Red Dress",
+      "price": {
+        "was": "50",
+        "then1": "45",
+        "then2": "",
+        "now": "40"
+      },
+      "colorSwatches": [
+        {
+          "color": "Red",
+          "basicColor": "Red",
+          "skuId": "4"
+        }
+      ]
+    },
+    {
+      "productId": "300",
+      "title": "Blue Dress",
+      "price": {
+        "was": "5.99",
+        "then1": "",
+        "then2": "",
+        "now": "4.99"
+      },
+      "colorSwatches": [
+        {
+          "color": "Blue",
+          "basicColor": "Blue",
+          "skuId": "3"
+        }
+      ]
+    },
+    {
+      "productId": "200",
+      "title": "Green Dress",
+      "price": {
+        "was": "30",
+        "then1": "20",
+        "then2": "15",
+        "now": "10"
+      },
+      "colorSwatches": [
+        {
+          "color": "Green",
+          "basicColor": "Green",
+          "skuId": "2"
+        }
+      ]
+    }
+  ]
+}

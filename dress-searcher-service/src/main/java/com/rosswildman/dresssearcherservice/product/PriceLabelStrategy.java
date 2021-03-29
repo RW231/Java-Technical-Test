@@ -1,6 +1,6 @@
 package com.rosswildman.dresssearcherservice.product;
 
-import com.rosswildman.dresssearcherservice.datasource.ProductData;
+import com.rosswildman.dresssearcherservice.datasource.PriceData;
 
 /**
  * Creates price labels for products.
@@ -8,5 +8,5 @@ import com.rosswildman.dresssearcherservice.datasource.ProductData;
  * The price label is formatted to the chosen specification.
  */
 public interface PriceLabelStrategy {
-    String createLabel(ProductData.PriceData priceData);
+    String createLabel(PriceData priceData);
 }

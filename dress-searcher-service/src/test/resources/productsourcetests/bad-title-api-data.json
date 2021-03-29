@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "productId": "111222",
+      "title": "",
+      "price": {
+        "was": "",
+        "then1": "",
+        "then2": "",
+        "now": "10.00"
+      },
+      "colorSwatches": [
+        {
+          "color": "Black and blue",
+          "basicColor": "Blue",
+          "skuId": "909"
+        },
+        {
+          "color": "White and Gold",
+          "basicColor": "Gold",
+          "skuId": "101"
+        }
+      ]
+    },
+    {
+      "productId": "400",
+      "title": null,
+      "price": {
+        "was": "50",
+        "then1": "45",
+        "then2": "",
+        "now": "40"
+      },
+      "colorSwatches": [
+        {
+          "color": "Red",
+          "basicColor": "Red",
+          "skuId": "4"
+        }
+      ]
+    }
+  ]
+}

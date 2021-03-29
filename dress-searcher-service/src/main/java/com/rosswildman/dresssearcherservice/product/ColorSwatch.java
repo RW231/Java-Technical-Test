@@ -1,6 +1,6 @@
 package com.rosswildman.dresssearcherservice.product;
 
-import com.rosswildman.dresssearcherservice.datasource.ProductData;
+import com.rosswildman.dresssearcherservice.datasource.ColorData;
 
 public class ColorSwatch {
     String color;
@@ -8,10 +8,10 @@ public class ColorSwatch {
     String skuId;
 
     /**
-     * Constructs a new ColorSwatch from {@link ProductData.ColorData}.
+     * Constructs a new ColorSwatch from {@link ColorData}.
      * @param colorData raw color data.
      */
-    public ColorSwatch(ProductData.ColorData colorData) {
+    public ColorSwatch(ColorData colorData) {
 
     }
 
