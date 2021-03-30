@@ -48,6 +48,24 @@ public class ProductDataMother {
                 .build();
     }
 
+    public static ProductData springDress() {
+        return ProductData.builder()
+            .productId("1000")
+            .title("Spring Dress")
+            .colorData(Arrays.asList(green(),blue()))
+            .priceData(is20())
+            .build();
+    }
+
+    public static ProductData sparklyDress() {
+        return ProductData.builder()
+            .productId("1001")
+            .title("Sparkly Dress")
+            .colorData(Collections.singletonList(red()))
+            .priceData(is50())
+            .build();
+    }
+
     public static ColorData blackBlue() {
         return ColorData.builder()
                 .color("Black and Blue")
@@ -139,5 +157,22 @@ public class ProductDataMother {
                 .build();
     }
 
+    public static PriceData is20() {
+        return PriceData.builder()
+            .was(BigDecimal.ZERO)
+            .then1(BigDecimal.ZERO)
+            .then2(BigDecimal.ZERO)
+            .now(new BigDecimal("20"))
+            .build();
+    }
+
+    public static PriceData is50() {
+        return PriceData.builder()
+            .was(BigDecimal.ZERO)
+            .then1(BigDecimal.ZERO)
+            .then2(BigDecimal.ZERO)
+            .now(new BigDecimal("50"))
+            .build();
+    }
 
 }

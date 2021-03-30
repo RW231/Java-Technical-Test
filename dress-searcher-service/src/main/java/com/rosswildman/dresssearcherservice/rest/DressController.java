@@ -1,6 +1,8 @@
 package com.rosswildman.dresssearcherservice.rest;
 
+import com.rosswildman.dresssearcherservice.datasource.ProductSource;
 import com.rosswildman.dresssearcherservice.product.Dress;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,11 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * A RESTful API for fetching dresses
+ * A RESTful API for fetching dresses with price reductions
  */
 @RestController
 @RequestMapping("/dresses")
 public class DressController {
+    private ProductSource productSource;
+
+    @Autowired
+    public DressController(ProductSource productSource) {
+        this.productSource = productSource;
+    }
 
     /**
      * Gets a list of dresses with price reductions.
