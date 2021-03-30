@@ -1,10 +1,12 @@
 package com.rosswildman.dresssearcherservice.product;
 
 import com.rosswildman.dresssearcherservice.datasource.ProductData;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Getter
 public class Dress {
     String productId;
     String title;
@@ -12,6 +14,16 @@ public class Dress {
     String nowPrice;
     String priceLabel;
     BigDecimal priceReduction;
+
+    /**
+     * Constructs a new Dress from {@link ProductData}, with the default @{link
+     * {@link ShowWasNowLabel}} price label strategy.
+     * @see #Dress(ProductData, PriceLabelStrategy)
+     * @param productData The raw product data
+     */
+    public Dress(ProductData productData) {
+        this(productData, new ShowWasNowLabel());
+    }
 
     /**
      * Constructs a new Dress from {@link ProductData}.

@@ -1,6 +1,5 @@
 package com.rosswildman.dresssearcherservice.product;
 
-import com.rosswildman.dresssearcherservice.datasource.ColorData;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
