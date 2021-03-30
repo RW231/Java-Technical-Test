@@ -31,7 +31,7 @@ class DressControllerTest {
             .when(productApiSource).getDressData();
         List<Dress> dresses = dressController.getDresses("ShowWasNow");
         assertThat(dresses).extracting("title")
-            .containsExactly("Red Dress", "The Dress");
+            .containsExactlyInAnyOrder("Red Dress", "The Dress");
     }
 
     @Test
@@ -44,7 +44,7 @@ class DressControllerTest {
     }
 
     @Test
-    void getDresses_LabelStrategyShowWasNow_PriceLabelFormat() {
+    void getDresses_LabelStrategyShowWasNow_PriceLabelFormattedToSpec() {
         Mockito.doReturn(Arrays.asList(blueDress(),theDress(),redDress(),greenDress()))
             .when(productApiSource).getDressData();
         List<Dress> dresses = dressController.getDresses("ShowWasNow");
@@ -58,10 +58,10 @@ class DressControllerTest {
     }
 
     @Test
-    void getDresses_LabelStrategyShowWasNowThen_PriceLabelFormat() {
+    void getDresses_LabelStrategyShowWasNowThen_PriceLabelFormattedToSpec() {
         Mockito.doReturn(Arrays.asList(blueDress(),theDress(),redDress(),greenDress()))
             .when(productApiSource).getDressData();
-        List<Dress> dresses = dressController.getDresses("ShowWasNow");
+        List<Dress> dresses = dressController.getDresses("ShowWasThenNow");
         assertThat(dresses).extracting("title", "priceLabel")
             .contains(
                 tuple("Green Dress", "Was £30.00, then £15.00, now £10.00"),
@@ -72,16 +72,30 @@ class DressControllerTest {
     }
 
     @Test
-    void getDresses_LabelStrategyShowPercDiscount_PriceLabelFormat() {
+    void getDresses_LabelStrategyShowPercDiscount_PriceLabelFormattedToSpec() {
         Mockito.doReturn(Arrays.asList(blueDress(),theDress(),redDress(),greenDress()))
             .when(productApiSource).getDressData();
-        List<Dress> dresses = dressController.getDresses("ShowWasNow");
+        List<Dress> dresses = dressController.getDresses("ShowPercDiscount");
         assertThat(dresses).extracting("title", "priceLabel")
             .contains(
                 tuple("Green Dress", "67% off - now £10.00"),
                 tuple("Red Dress", "20% off - now £40.00"),
                 tuple("The Dress", "50% off - now £5.00"),
                 tuple("Blue Dress", "17% off - now £4.99")
+            );
+    }
+
+    @Test
+    void getDresses_InvalidLabelStrategy_PriceLabelDefaultsToShowWasNowFormat() {
+        Mockito.doReturn(Arrays.asList(blueDress(),theDress(),redDress(),greenDress()))
+            .when(productApiSource).getDressData();
+        List<Dress> dresses = dressController.getDresses("InvalidLabelType");
+        assertThat(dresses).extracting("title", "priceLabel")
+            .contains(
+                tuple("Green Dress", "Was £30.00, now £10.00"),
+                tuple("Red Dress", "Was £50.00, now £40.00"),
+                tuple("The Dress", "Was £10.00, now £5.00"),
+                tuple("Blue Dress", "Was £5.99, now £4.99")
             );
     }
 }
