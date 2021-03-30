@@ -1,5 +1,6 @@
 package com.rosswildman.dresssearcherservice.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rosswildman.dresssearcherservice.datasource.ProductData;
 import lombok.Getter;
 
@@ -16,6 +17,7 @@ public class Dress {
     List<ColorSwatch> colorSwatches;
     String nowPrice;
     String priceLabel;
+    @JsonIgnore
     BigDecimal priceReduction;
 
     /**
