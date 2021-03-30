@@ -4,11 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ross-wildman</groupId>
-    <artifactId>dress-searcher-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Dress Searcher Project</name>
+    <artifactId>dress-searcher-service</artifactId>
+    <version>1.0.0</version>
+    <name>Dress Searcher Service</name>
     <description>Java Technical Test for John Lewis Partnership</description>
-    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,11 +19,6 @@
     <properties>
         <java.version>11</java.version>
     </properties>
-
-    <modules>
-        <module>dress-searcher-service</module>
-        <module>dress-searcher-client</module>
-    </modules>
 
     <dependencies>
         <dependency>
