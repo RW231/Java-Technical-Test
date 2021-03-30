@@ -11,7 +11,7 @@ class ShowWasThenNowLabelTest {
 
     @Test
     void createLabel_PriceThen2NotEmpty_ReturnsFormattedLabelUsingPriceThen2() {
-        assertEquals("Was £30.00, then £15.00, now, £10.00",
+        assertEquals("Was £30.00, then £15.00, now £10.00",
             showWasThenNowLabel.createLabel(was30Then20Then15Now10()));
     }
 

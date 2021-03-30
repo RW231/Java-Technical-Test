@@ -106,6 +106,8 @@ public class ProductDataMother {
     public static PriceData was10Now5() {
         return PriceData.builder()
                 .was(new BigDecimal(10))
+                .then1(BigDecimal.ZERO)
+                .then2(BigDecimal.ZERO)
                 .now(new BigDecimal(5))
                 .build();
     }
@@ -113,6 +115,8 @@ public class ProductDataMother {
     public static PriceData was5d99Now4d99() {
         return PriceData.builder()
                 .was(new BigDecimal("5.99"))
+                .then1(BigDecimal.ZERO)
+                .then2(BigDecimal.ZERO)
                 .now(new BigDecimal("4.99"))
                 .build();
     }
@@ -121,6 +125,7 @@ public class ProductDataMother {
         return PriceData.builder()
                 .was(new BigDecimal(50))
                 .then1(new BigDecimal(45))
+                .then2(BigDecimal.ZERO)
                 .now(new BigDecimal(40))
                 .build();
     }

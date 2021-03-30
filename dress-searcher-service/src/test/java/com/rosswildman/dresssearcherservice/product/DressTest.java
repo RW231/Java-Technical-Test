@@ -15,7 +15,7 @@ class DressTest {
         assertAll("dress",
             () -> assertEquals("111222", dress.getProductId()),
             () -> assertEquals("The Dress", dress.getTitle()),
-            () -> assertEquals("£10", dress.getNowPrice()),
+            () -> assertEquals("£5.00", dress.getNowPrice()),
             () -> assertEquals("Was £10.00, now £5.00", dress.getPriceLabel()),
             () -> assertEquals(BigDecimal.valueOf(5), dress.getPriceReduction())
         );
@@ -53,13 +53,13 @@ class DressTest {
 
     @Test
     void dressConstructor_LabelStrategyShowWasThenNow_PriceLabelFormat() {
-        Dress dress = new Dress(redDress());
+        Dress dress = new Dress(redDress(), new ShowWasThenNowLabel());
         assertEquals("Was £50.00, then £45.00, now £40.00", dress.getPriceLabel());
     }
 
     @Test
     void dressConstructor_LabelStrategyShowPercDiscount_PriceLabelFormat() {
-        Dress dress = new Dress(greenDress());
+        Dress dress = new Dress(blueDress(), new ShowPercDiscountLabel());
         assertEquals("17% off - now £4.99", dress.getPriceLabel());
     }
 }
