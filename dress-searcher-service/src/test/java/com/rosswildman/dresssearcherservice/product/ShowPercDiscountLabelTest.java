@@ -17,5 +17,7 @@ class ShowPercDiscountLabelTest {
             showPercDiscountLabel.createLabel(was10Now5()));
         assertEquals("67% off - now £10.00",
             showPercDiscountLabel.createLabel(was30Then20Then15Now10()));
+        assertEquals("Now £20.00",
+            showPercDiscountLabel.createLabel(is20()));
     }
 }
